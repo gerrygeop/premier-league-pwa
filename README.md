@@ -1,5 +1,5 @@
-# gerrygeop.github.io
+# Dicoding - Membangun Progressive Web Apps
 
-### Dicoding - Membangun Progressive Web Apps
+### Submission 3
 
-Submission 3
+https://gerrygeop.github.io/

@@ -14,7 +14,7 @@ const dbInsertMatch = match => {
         })
         .then(tx => {
             if (tx.complete) {
-                toast('Match saved.');
+                toastText('Match saved.');
                 resolve(true);
             } else {
                 reject(new Error(`Insert DB Error: ${tx.onerror}`));
@@ -33,7 +33,7 @@ const dbDeleteMatch = matchId => {
         })
         .then(tx => {
             if (tx.complete) {
-                toast('Match deleted.');
+                toastText('Match deleted.');
                 showAllSaved();
                 resolve(true)
             } else {
@@ -59,3 +59,7 @@ const dbGetAllMatches = () => {
         })
     })
 };
+
+const toastText = (text) => {
+    return M.toast({html: `<p class="orange-text text-lighten-2">${text}</p>`, classes: 'blue-grey darken-4'});
+}

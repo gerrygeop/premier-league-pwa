@@ -191,23 +191,3 @@ function showAllSaved() {
         document.getElementById('preloader').innerHTML = '';
     });
 }
-
-
-function toast(text) {
-    return M.toast({html: `<p class="orange-text text-lighten-2">${text}</p>`, classes: 'blue-grey darken-4'});
-}
-
-const preLoader = 
-`<div class="preloader-wrapper active">
-    <div class="spinner-layer spinner-red-only">
-        <div class="circle-clipper left">
-            <div class="circle"></div>
-        </div>
-        <div class="gap-patch">
-            <div class="circle"></div>
-        </div>
-        <div class="circle-clipper right">
-            <div class="circle"></div>
-        </div>
-    </div>
-</div>`;

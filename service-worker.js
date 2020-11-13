@@ -25,13 +25,15 @@ if (!workbox) {
         {url: '/icons/icon-192x192.png', revision: '1'},
         {url: '/icons/icon-512x512.png', revision: '1'},
         {url: '/icons/logo.svg', revision: '1'},
-    ]);
+    ], {
+    ignoreURLParametersMatching: [/.*/]
+    });
 
 
     workbox.routing.registerRoute(
-        new RegExp("/pages/"),
+        new RegExp('/pages/'),
         workbox.strategies.staleWhileRevalidate({
-            cacheName: "pages"
+            cacheName: 'pages'
         })
     );
 

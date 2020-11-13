@@ -64,6 +64,13 @@ body {
   font-style: italic !important;
 }
 
+.header-standing {
+  margin: 0;
+}
+.header-sub {
+  margin: 10px;
+}
+
 @media only screen and (max-width: 425px) {
   .standing-padding {
     padding: 0;
@@ -83,7 +90,11 @@ body {
   }
 
   .header-standing {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .header-sub {
+    font-size: 18px;
     font-weight: 400;
   }
 

@@ -6,27 +6,27 @@ if (workbox) {
     console.log('Workbox Gagal dimuat');
 }
 
-// workbox.precaching.precacheAndRoute([
-//     {url: '/', revision: '1'},
-//     {url: '/index.html', revision: '2'},
-//     {url: '/nav.html', revision: '1'},
-//     {url: '/manifest.json', revision: '1'},
-//     {url: '/register.js', revision: '2'},
-//     {url: '/css/materialize.min.css', revision: '1'},
-//     {url: '/css/style.css', revision: '1'},
-//     {url: '/js/api.js', revision: '1'},
-//     {url: '/js/db.js', revision: '1'},
-//     {url: '/js/idb.js', revision: '1'},
-//     {url: '/js/materialize.min.js', revision: '1'},
-//     {url: '/js/nav.js', revision: '1'},
-//     {url: '/js/view.js', revision: '1'},
-//     {url: '/pages/matches.html', revision: '1'},
-//     {url: '/pages/saved.html', revision: '1'},
-//     {url: '/pages/standing.html', revision: '1'},
-//     {url: '/icons/icon-192x192.png', revision: '1'},
-//     {url: '/icons/icon-512x512.png', revision: '1'},
-//     {url: '/icons/logo.svg', revision: '1'},
-// ]);
+workbox.precaching.precacheAndRoute([
+    {url: '/', revision: '1'},
+    {url: '/index.html', revision: '1'},
+    {url: '/nav.html', revision: '1'},
+    {url: '/manifest.json', revision: '1'},
+    {url: '/register.js', revision: '1'},
+    {url: '/css/materialize.min.css', revision: '1'},
+    {url: '/css/style.css', revision: '1'},
+    {url: '/js/api.js', revision: '1'},
+    {url: '/js/db.js', revision: '1'},
+    {url: '/js/idb.js', revision: '1'},
+    {url: '/js/materialize.min.js', revision: '1'},
+    {url: '/js/nav.js', revision: '1'},
+    {url: '/js/view.js', revision: '1'},
+    {url: '/pages/matches.html', revision: '1'},
+    {url: '/pages/saved.html', revision: '1'},
+    {url: '/pages/standing.html', revision: '1'},
+    {url: '/icons/icon-192x192.png', revision: '1'},
+    {url: '/icons/icon-512x512.png', revision: '1'},
+    {url: '/icons/logo.svg', revision: '1'},
+]);
 
 
 workbox.routing.registerRoute(

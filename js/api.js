@@ -23,41 +23,18 @@ const fetchAPI = url => {
 
 const getStanding = () => {
     loader.innerHTML = preLoader;
-    return new Promise(function(resolve, reject) {
-        if ("caches" in window) {
-            caches.match(`${BASE_URL}competitions/PL/standings`).then(response => {
-                if (response) {
-                    response.json().then(data => {
-                        console.log("Standings Caches: ", data);
-                        showStanding(data);
-                        resolve(data);
-                    });
-                }
-            });
-        }
-
-        fetchAPI(`${BASE_URL}competitions/PL/standings`)
-            .then(data => {
-                showStanding(data);
-                resolve(data);
-            })
-            .catch(error => console.log("Standings Error: ", error));
-    });
+    
+    fetchAPI(`${BASE_URL}competitions/PL/standings`)
+        .then(data => {
+            showStanding(data);
+            resolve(data);
+        })
+        .catch(error => console.log("Standings Error: ", error));
 }
 
 
 const getAllMatches = matchday => {
     loader.innerHTML = preLoader;
-    if ("caches" in window) {
-        caches.match(`${BASE_URL}competitions/PL/matches?matchday=${matchday}`).then(response => {
-            if (response) {
-                response.json().then(data => {
-                    console.log("getAllMatches Caches: ", data);
-                    showMatches(data);
-                });
-            }
-        });
-    }
 
     fetchAPI(`${BASE_URL}competitions/PL/matches?matchday=${matchday}`)
         .then(data => {
@@ -68,16 +45,6 @@ const getAllMatches = matchday => {
 
 const getMatchById = matchId => {
     loader.innerHTML = preLoader;
-    if ("caches" in window) {
-        caches.match(`${BASE_URL}matches/${matchId}`).then(response => {
-            if (response) {
-                response.json().then(data => {
-                    console.log("getMatchById Caches: ", data.match);
-                    showModals(data.match);
-                });
-            }
-        });
-    }
 
     fetchAPI(`${BASE_URL}matches/${matchId}`)
         .then(data => {

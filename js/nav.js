@@ -45,12 +45,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (this.status === 200) {
                     content.innerHTML = xhttp.responseText;
 
-                    if (page === "standing") {
-                        getStanding();
-                    } else if (page === "matches") {
-                        getAllMatches(1);
-                    } else if (page === "saved") {
-                        showAllSaved();
+                    switch (page) {
+                        case "standing":
+                            getStanding();
+                            break;
+                        case "matches":
+                            getAllMatches(1);
+                            break;
+                        case "saved":
+                            showAllSaved();
+                            break;
+                        default:
+                            break;
                     }
 
                 } else if(this.status === 404) {

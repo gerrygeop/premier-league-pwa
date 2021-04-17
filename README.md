@@ -2,4 +2,4 @@
 
 ### Submission 3
 
-https://gerrygeop.github.io/
+https://gerrygeop.github.io/premier-league-pwa
